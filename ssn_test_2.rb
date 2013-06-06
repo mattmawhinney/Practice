@@ -1,15 +1,17 @@
 # Determine whether a string contains a Social Security number.
 def has_ssn?(string)
    if /\d{3}-\d{2}-\d{4}/.match(string)
-    true
-  else 
-    false
-  end 
+     true
+   else 
+     false
+   end
 end
 
 # Return the Social Security number from a string.
 def grab_ssn(string)
-   string[/\d{3}-\d{2}-\d{4}/]
+  if /\d{3}-\d{2}-\d{4}/.match(string)
+    string[/\d{3}-\d{2}-\d{4}/]
+   end
 end
 
 # Return all of the Social Security numbers from a string.
@@ -31,11 +33,19 @@ end
 #Put those into a new array and iterate over array to obfuscate
 #Then return to the original string and replace the ssns with obfuscated 
 #SSNs using a stagered count k
-
+#commas seems to create an issue 
 
 def hide_all_ssns(string)
-  to_be_hidden = grab_all_ssns(string) 
-  ssn_a = string.split(' ')  
+  
+  ssn_a = string.split(' ')
+  to_be_hidden = []
+  
+  ssn_a.each do |x|  
+	if /\d{3}-\d{2}-\d{4},/.match(x)
+	  to_be_hidden << x[/\d{3}-\d{2}-\d{4},/]
+	elsif /\d{3}-\d{2}-\d{4}/.match(x)
+	  to_be_hidden << x[/\d{3}-\d{2}-\d{4}/]
+	end
   
   to_be_hidden.each do |x|
     x[0..2] = 'X' * 3 
@@ -44,7 +54,7 @@ def hide_all_ssns(string)
  
   count = 0 
 
- ssn_a.each do |x|
+  ssn_a.each do |x|
     if ssn_a[count] =~ /\d{3}-\d{2}-\d{4}/ || ssn_a[count] =~ /\d{3}-\d{2}-\d{4},/
        ssn_a[count] = to_be_hidden[0]
        to_be_hidden.shift
