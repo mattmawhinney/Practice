@@ -7,7 +7,7 @@ class CreditCard
   #thinking I need a regex that can take any string input and tell if it
   #contains exactly 16 digits 
   def initialize(number)
-    unless number =~ /(\d{4})(\s*)(\d{4})(\s*)(\d{4})(\s*)(\d{4})/
+    unless number.to_s.length == 16 
       raise ArgumentError 
     end 
     @number = number  
@@ -17,13 +17,13 @@ class CreditCard
   #take the number input then perform the various steps of the Luhn algorithm 
   
   
-  def card_check
+  def check_card
   
   
     #need to take number and split it into an array using number.split 
     #once in array iterate over the array doubling every even indexed number 
     
-    first_array = @number.split('')
+    first_array = @number.to_s.split('')
     count = 0 
     
     first_array.each do |x|
@@ -49,11 +49,8 @@ class CreditCard
   
    #see if they are visible by 10  
     
-   if sum % 10 == 0 
-    true
-   else
-    false
-   end 
+   sum % 10 == 0 
+  
   end
   
 
