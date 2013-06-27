@@ -45,12 +45,26 @@ div {
             float:left; 
             background: #3B4E32;
             font-size: 14px; 
-            margin-top: 0px
-            margin-bottom: 0px; 
+            margin: -5px; 
+            padding: 10px;  
             border: 2px solid #ffffff;
             border-radius: 5px; 
  }
         
+
+      /*   margin-top: 0px
+            margin-bottom: 0px;
+           width: 125px;
+           font-size: 14px;
+           border: 2px solid #ffffff;
+           border-radius: 5px;           
+           background: #3B4E32;
+
+
+
+                                */
+
+
         /* display block will make the link fill the whole area of LI */
         #nav ul a {
             display:block;  
@@ -75,6 +89,14 @@ h3 {
 	margin-left: 10px;
 	margin-bottom: 15px;
 	font-family: Verdana, sans-serif;
+}
+
+.right a:link {
+
+      text-decoration: none;
+      color: #3B4E32;
+      font-weight: bold; 
+  
 }
 
 .right p {
@@ -109,7 +131,8 @@ li {
 	margin-top: 50px;
 	width: 79%;
 	height: 540px;
-	background-color: #F7F7B9;
+	/* background-color: #F7F7B9; */
+        background-color: #FDFD8D;
 	margin-bottom: 10px;
 }
 
@@ -128,6 +151,8 @@ img {
 
 }
 
+
+
 #footer {
 	position: relative;
 	height: 50px;
@@ -143,4 +168,9 @@ img {
 #footer p {
 	position: relative;
 	padding-top: 15px;
+}
+
+#footer p a {
+        text-decoration: underline;
+	color: #ffffff;
 }
