@@ -1,4 +1,4 @@
-# http://www.rubeque.com/problems/reverse-each-wordk
+# http://www.rubeque.com/problems/reverse-each-word
 # http://ruby-doc.org/core-2.0/Enumerable.html#method-i-inject
 # After some refactoring both these methods work!  
 # Both use Enumerable#inject; however, the first removes the unecessary ' ' at the end of the string 
