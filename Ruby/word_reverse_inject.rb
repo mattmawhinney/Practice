@@ -1,4 +1,4 @@
-# http://www.rubeque.com/problems/reverse-each-wordk
+# http://www.rubeque.com/problems/reverse-each-word
 # http://ruby-doc.org/core-2.0/Enumerable.html#method-i-inject
 # After some refactoring both these methods work!  
 # Both use Enumerable#inject; however, the first removes the unecessary ' ' at the end of the string 
@@ -10,6 +10,7 @@
 def reverse_each_word(sentence)
   jumble = sentence.split.inject('') { |sentence, word| sentence + word.reverse + " " } 
   jumble[-1] = ''
+  jumble
 end
 	
 reverse_each_word("Hello there, and how are you?") # => "olleH ,ereht dna woh era ?uoy"
