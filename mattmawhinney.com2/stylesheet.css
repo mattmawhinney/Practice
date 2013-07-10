@@ -1,166 +1,148 @@
 div {
-	border-radius: 5px;
+  border-radius: 5px;
 }
-
-#header {
-	z-index: 1;
-	position: fixed;
-	width: 99.0%;
-	margin-top: -20px;
-	height: 60px;
-	background-color: #624235;
-	margin-bottom: 10px;
-}
-
-
-#nav li {
-
  
-   display: inline-block;
-   margin-left: 10px;
-   margin-right: 10px;
-   padding-top: 5px;
-   font-size: 18px;
-   font-family: Helvetica, sans-serif;
-   color: #ffffff;
-
+#header {
+  z-index: 1;
+  position: fixed;
+  width: 99.0%;
+  margin-top: -20px;
+  height: 60px;
+  background-color: #624235;
+  margin-bottom: 10px;
 }
-
+ 
+ 
+#nav li {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 5px;
+  font-size: 18px;
+  font-family: Helvetica, sans-serif;
+  color: #ffffff;
+}
+ 
 #header a:hover {
-	font-weight: bold;
+  font-weight: bold;
 }
-
-
+ 
 #nav ul {
-            
-            position:absolute; 
-            display:none; 
-            margin:0 0 0 0; 
-            padding: 0px; 
-            list-style:none;
-        }
-        
- #nav ul li {
-            width:125px; 
-            float:left; 
-            background: #624235;
-            font-size: 14px; 
-            margin: -5px; 
-            padding: 10px;  
-            border: 2px solid #ffffff;
-            border-radius: 5px; 
- }
-        
-
-     
-
-        /* display block will make the link fill the whole area of LI */
-        #nav ul a {
-            display:block;  
-            height:15px;
-            padding: 8px 5px; 
-            color:#666;
-        }
-        
-        /* #nav ul a:hover {
-            text-decoration:underline;    
-        } */
-/* fix ie6 small issue */
-/* we should always avoid using hack like this */
-/* should put it into separate file : ) */
-*html #nav ul {
-    margin:0 0 0 -2px;
+  position:absolute;
+  display:none;
+  margin:0 0 0 0;
+  padding: 0px;
+  list-style:none;
+}
+#nav ul li {
+  width:125px;
+  float:left;
+  background: #624235;
+  font-size: 14px;
+  margin: -5px;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
 }
 
+/* display block will make the link fill the whole area of LI */
+/* otherwise our "drop down" menu will go out to the side */
+ 
+#nav ul a {
+  display:block;
+  height:15px;
+  padding: 8px 5px;
+  color:#666;
+}
+
+/* might need to throw this in */
+/* to deal with small ie6 small issue */
+/* I have it commented out for now */
+ 
+ 
+/* *html #nav ul {
+  margin:0 0 0 -2px;
+} */ 
 
 
 h3 {
-	margin-left: 10px;
-	margin-bottom: 15px;
-	font-family: Verdana, sans-serif;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  font-family: Verdana, sans-serif;
 }
 
 .right a:link {
-
-      text-decoration: none;
-      color: #624235;
-      font-weight: bold; 
-  
-}
+  text-decoration: none;
+  color: #624235;
+  font-weight: bold; 
+ }
 
 .right p {
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: -10px;
-	font-family: Verdana, serif;
-        font-size: 14px; 
-	color: #000000;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: -10px;
+  font-family: Verdana, serif;
+  font-size: 14px; 
+  color: #000000;
 }
 
 li {
-	list-style-type: square;
+  list-style-type: square;
 }
 
 
 .left {
-	position: relative;
-	float: left;
-	margin-top: 50px;
-       	width: 20%;
-	height: 540px;
-	margin-bottom: 10px;
-        
-        border-radius: 5px; 
-        display: block;
- 
+  position: relative;
+  float: left;
+  margin-top: 50px;
+  width: 20%;
+  height: 540px;
+  margin-bottom: 10px;
+  border-radius: 5px; 
+  display: block;
 }
 
 .right {
-	position: relative;
-	float: right;
-	margin-top: 50px;
-	width: 79%;
-	height: 540px;
-	/* background-color: #F7F7B9; */
-        background-color: #F7F7B9	;
-	margin-bottom: 10px;
+  position: relative;
+  float: right;
+  margin-top: 50px;
+  width: 79%;
+  height: 540px;
+  background-color: #F7F7B9	;
+  margin-bottom: 10px;
 }
 
 
 
 img {
-  
-      
-      position: relative;
-      display: block;
-      width: 100%;
-      height: 540px;
-      border-radius: 5px; 
-      background-color: #F4EBC3;
-
-
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 540px;
+  border-radius: 5px; 
+  background-color: #F4EBC3;
 }
 
 
 
 #footer {
-	position: relative;
-	height: 50px;
-        width: 100%;
-	background-color: #624235;
-	clear: both;
-	font-family: Verdana, sans-serif;
-	font-size: 14px;
-	text-align: center;
-	color: #ffffff;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  background-color: #624235;
+  clear: both;
+  font-family: Verdana, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: #ffffff;
 }
 
 #footer p {
-	position: relative;
-	padding-top: 15px;
+  position: relative;
+  padding-top: 15px;
 }
 
 #footer p a {
-        text-decoration: underline;
-	color: #ffffff;
-}
+  text-decoration: underline;
+  color: #ffffff;
+}         
